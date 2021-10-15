@@ -26,13 +26,38 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map is used to return a new array to convert data. 
+If I want to receive only a specific values in a new array, I would use .map().
+
+.reduce is used to return a single value. .reduce requires 2 parameters, accumulate, which is like a bucket for storing the running total and item, the element being passed into the accumulator. It also requires an initial value.
+.reduce could be used in a case where you want to add a sum of values within an array.
+
+.filter returns a new array and looks for a boolean value. If it is true, it puts it into the new array. 
+A use case of .filter could be if you're going through an array of people and there is a key of relationship status. You could return the value of a single or married person into a new array. 
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback functions are passed into higher order functions as arguments.
+
+Higher Order functions receive other functions (such as callbacks) as an argument.
 
 3. Explain what a closure is.
 
+Closure happens when an inner function reaches to an outer function to grab a value, defined in the outer function. It gives us the ability to nest functions and pass variable down into the nested functions. It closes off code so that it isn't in the global scope, so we can access it only when needed.
+
 4. Describe the four principles of the 'this' keyword.
 
+Implicit Binding: The most common use case; implicit binding is referring to what is to the left of the dot in objects with methods.
+
+Explicit Binding: invoked by 'call', 'apply', and 'bind' allow us to explicitly state what 'this' refers to.
+
+New Binding: the 'new' keyword binds this to a new object when a function is invoked as a constructor.
+
+Window Binding: If none of the other rules apply 'this' defaults to the window (JavaScript itself), unless in strict mode.
+
 5. Why do we need super() in an extended class?
+
+Super and extend work toghether to do what .call and Object.create did in a prototype. Super tells the constructor what attributes to inherit from the parent. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
